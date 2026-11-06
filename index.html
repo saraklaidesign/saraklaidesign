@@ -562,6 +562,70 @@
     .practice-panel .practice-quote{margin-top:56px;padding-bottom:64px;text-align:left}
     .practice-panel .statement,.practice-panel .founder-block,.practice-panel .practice-quote{text-align:left}
   }
+  /* Desktop polish pass (min-width:1024px only). Every rule below lives
+     inside this single breakpoint block, so all mobile and tablet values
+     above render exactly as before. On wide screens the editorial type
+     steps up to a design-journal scale, text columns are held to a
+     readable measure, and content photography is capped and centered
+     instead of running as full-viewport-width slabs. The pinned heroes
+     (home video, Practice photo, Process photo) stay full-bleed. */
+  @media (min-width:1024px){
+    /* Section labels stay small and quiet on desktop too. */
+    .label{font-size:12.5px}
+
+    /* Home: hero headline on one line; the portrait video keeps its
+       centre band, where the room's main furniture sits, in frame. */
+    .home-hero video{object-position:center}
+    .home-hero-overlay{max-width:1280px}
+    .home-hero .lead{
+      font-size:clamp(56px,4.5vw,64px);line-height:1.2;max-width:none;
+    }
+    .home-intro p{font-size:30px;line-height:1.4;max-width:780px}
+
+    /* Practice: headline, editorial statement, and quote step up;
+       text columns held to a readable measure, alignment unchanged. */
+    .practice-headline{font-size:42px;line-height:1.22}
+    .statement{max-width:760px}
+    .statement p.practice-editorial{font-size:30px;line-height:1.35}
+    .portrait-break img{max-width:520px}
+    .founder-block{max-width:760px}
+    .practice-quote p{font-size:34px;line-height:1.35;max-width:760px}
+
+    /* Process: hero title, section headings, and steps step up. */
+    .process-hero h1{font-size:52px}
+    .process-opening{max-width:800px}
+    .seq-intro h2{font-size:40px}
+    .pstep h3{font-size:19px}
+    .pstep p{font-size:17px;line-height:1.55}
+
+    /* Projects: statement and titles step up; the photographs come off
+       the full-viewport bleed and sit capped and centered. */
+    .projects-statement{max-width:800px}
+    .projects-statement p{font-size:28px;line-height:1.38}
+    .project-img{width:100%;max-width:1120px;margin-left:auto;margin-right:auto}
+    .project-caption h3{font-size:32px}
+
+    /* Project pages: titles and ledes scale modestly; the gallery is
+       capped and centered like the Projects page photographs. */
+    .project-hero h1{font-size:34px}
+    .project-lede{font-size:22px;line-height:1.45;max-width:760px}
+    .project-photos{width:100%;max-width:1120px;margin-left:auto;margin-right:auto}
+
+    /* Booking: the whole consultation column is held to about 680px,
+       centered; the calendar caps at a comfortable width inside it and
+       the form takes the full column, so slots stay easy to use. */
+    .consult.on-page{max-width:680px;margin-left:auto;margin-right:auto}
+    .consult.on-page .consult-grid{grid-template-columns:1fr;gap:44px}
+    .consult.on-page .cal{max-width:440px}
+
+    /* Menu overlay: the page words scale up modestly. */
+    .menu-links a{font-size:40px}
+
+    /* Contact: the panel keeps its locked half width; its serif lines
+       scale slightly. */
+    .contact-statement .contact-lead{font-size:30px;line-height:1.35}
+    .contact-statement .contact-sub{font-size:22px;line-height:1.4}
+  }
 </style>
 </head>
 <body>
